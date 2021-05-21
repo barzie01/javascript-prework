@@ -1,4 +1,6 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
+playerWin = 0;
+computerWin = 0;
 
 buttonTest = document.getElementById('button-test');
 buttonRock = document.getElementById('button-rock');
@@ -13,6 +15,13 @@ function printMessage(msg){
 
 function clearMessages(){
   document.getElementById('messages').innerHTML = '';
+  document.getElementById('result').innerHTML = ''
+}
+
+function printResult(rslt) {
+  var resultDiv = document.createElement('div')
+  resultDiv.innerHTML = rslt;
+  document.getElementById('result').appendChild(resultDiv)
 }
 
 /**
@@ -43,20 +52,28 @@ function buttonClicked(argButtonName) {
    * Describe this function...
    */
   function displayResult(argPlayerMove, argComputerMove) {
+    
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
+      playerWin++;
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
       printMessage('Wygrywasz!');
+      playerWin++;
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
       printMessage('Wygrywasz!');
+      playerWin++;
     } else if (argPlayerMove == argComputerMove) {
       printMessage('Remis!');
     } else {
       printMessage('Przegrywasz :(');
+      computerWin++;
     }
-    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    printMessage(' Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    printResult('Gracz ' + playerWin + '-' + computerWin + ' Komputer')
+    
   }
+
   playerMove = argButtonName;
   console.log('wybór ruchu gracza to: ' + playerMove);
 
@@ -71,7 +88,6 @@ function buttonClicked(argButtonName) {
 
 
 
-// buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
 
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 
