@@ -1,6 +1,6 @@
-var computerWin, argplayerWin, argcomputerWin;
+var argplayerWin, argcomputerWin;
 let playerWin = 0;
-var computerWin = 0;
+let computerWin = 0;
 
 function printMessage(msg){
   var div = document.createElement('div');
