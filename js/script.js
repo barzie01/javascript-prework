@@ -1,8 +1,6 @@
-var buttonTest, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
+var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
 var playerWin = 0;
 var computerWin = 0;
-
-buttonTest = document.getElementById('button-test');
 
 function printMessage(msg){
   var div = document.createElement('div');
