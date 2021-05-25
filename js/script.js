@@ -1,4 +1,4 @@
-var playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
+var randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
 var playerWin = 0;
 var computerWin = 0;
 
@@ -69,7 +69,7 @@ function buttonClicked(argButtonName) {
     
   }
 
-  playerMove = argButtonName;
+  let playerMove = argButtonName;
   console.log('wybór ruchu gracza to: ' + playerMove);
 
   console.log('ruch gracza to: ' + playerMove);
