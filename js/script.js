@@ -1,10 +1,10 @@
-var buttonPaper, buttonRock, buttonScissors, buttonTest, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
+var buttonRock, buttonScissors, buttonTest, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
 var playerWin = 0;
 var computerWin = 0;
 
 buttonTest = document.getElementById('button-test');
 buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
+const buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
 
 function printMessage(msg){
