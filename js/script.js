@@ -1,4 +1,3 @@
-var argcomputerWin;
 let playerWin = 0;
 let computerWin = 0;
 
