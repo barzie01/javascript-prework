@@ -1,4 +1,4 @@
-var randomNumber, playerWin, computerWin, argplayerWin, argcomputerWin;
+var playerWin, computerWin, argplayerWin, argcomputerWin;
 var playerWin = 0;
 var computerWin = 0;
 
@@ -73,7 +73,7 @@ function buttonClicked(argButtonName) {
   console.log('wybór ruchu gracza to: ' + playerMove);
 
   console.log('ruch gracza to: ' + playerMove);
-  randomNumber = Math.floor(Math.random() * 3 + 1);
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
   const computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
