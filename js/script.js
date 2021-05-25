@@ -1,5 +1,5 @@
-var playerWin, computerWin, argplayerWin, argcomputerWin;
-var playerWin = 0;
+var computerWin, argplayerWin, argcomputerWin;
+let playerWin = 0;
 var computerWin = 0;
 
 function printMessage(msg){
