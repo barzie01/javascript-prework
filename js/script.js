@@ -48,13 +48,7 @@ function buttonClicked(argButtonName) {
   function displayResult(argPlayerMove, argComputerMove) {
     
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-    if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-      printMessage('Wygrywasz!');
-      playerWin++;
-    } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-      printMessage('Wygrywasz!');
-      playerWin++;
-    } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
+    if (argPlayerMove == 'papier' && argComputerMove == 'kamień' || argPlayerMove == 'nożyce' && argComputerMove == 'papier' || argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
       printMessage('Wygrywasz!');
       playerWin++;
     } else if (argPlayerMove == argComputerMove) {
@@ -79,8 +73,6 @@ function buttonClicked(argButtonName) {
   displayResult(playerMove, computerMove);
   
 }
-
-
 
 const buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
