@@ -13,7 +13,7 @@ function clearMessages(){
 }
 
 function printResult(rslt) {
-  var resultDiv = document.createElement('div')
+  const resultDiv = document.createElement('div')
   resultDiv.innerHTML = rslt;
   document.getElementById('result').appendChild(resultDiv)
 }
